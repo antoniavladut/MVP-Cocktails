@@ -1,13 +1,13 @@
 
  CREATE TABLE IF NOT EXISTS cocktails ( 
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
-    title VARCHAR(100), 
-    method VARCHAR(100), 
-    glass VARCHAR(100),
-    ice VARCHAR(100),
-    garnish VARCHAR(100),
-    ingredients LONGTEXT,
-    instructions LONGTEXT
+    Title VARCHAR(100), 
+    Method VARCHAR(100), 
+    Glass VARCHAR(100),
+    Ice VARCHAR(100),
+    Garnish VARCHAR(100),
+    Ingredients LONGTEXT,
+    Instructions LONGTEXT
 
 ); 
  
