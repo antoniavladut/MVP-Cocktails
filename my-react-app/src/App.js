@@ -1,23 +1,27 @@
-import logo from "./logo.svg";
+import React, { useEffect, useState } from "react";
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import RecipeList from "./pages/RecipeList";
+import Error404 from "./pages/Error404";
+import Favourites from "./pages/Favourites";
+import AddCocktailForm from "./pages/AddCocktailForm";
+import RecipeProfile from "./pages/RecipeProfile";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/recipes" element={<RecipeList />} />
+        <Route path="/recipes/:id" element={<RecipeProfile />} />
+        <Route path="/favourites" element={<Favourites />} />
+        <Route path="/add-cocktail" element={<AddCocktailForm />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
     </div>
   );
 }
