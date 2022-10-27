@@ -22,13 +22,23 @@ function RecipeList(props) {
   return (
     <div className="RecipeList">
       <h2>Cocktails</h2>
-      <ul>
+
+      <div className="row row-cols-4">
         {recipes.map((e) => (
-          <li key={e.id} className="cocktail">
-            <Link to={"/recipes/" + e.id}>{e.title}</Link>
-          </li>
+          <div className="col">
+            <div className="card">
+              <a href={"/recipes/" + e.id} className="btn ">
+                <img src={e.imageUrl} className="card-img-top" alt={e.title} />
+
+                <div className="card-body">
+                  <h5 className="card-title">{e.title}</h5>
+                  <p className="card-text">{e.ingredients}</p>
+                </div>
+              </a>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

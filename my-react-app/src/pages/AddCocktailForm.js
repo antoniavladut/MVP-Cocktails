@@ -13,6 +13,7 @@ function AddCocktailForm() {
     garnish: "",
     ingredients: "",
     instructions: "",
+    imageUrl: "",
   });
 
   async function addCocktail() {
@@ -74,6 +75,10 @@ function AddCocktailForm() {
       <label>
         <div>Instructions</div>
         <input type="text" value={fields.instructions} onChange={onChange("instructions")} />
+      </label>
+      <label>
+        <div>Image Url</div>
+        <input type="url" value={fields.imageUrl} onChange={onChange("imageUrl")} />
       </label>
       <button type="submit">Add Cocktail</button>
     </form>

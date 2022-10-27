@@ -1,0 +1,9 @@
+.ImageRP {
+  width: 25%;
+  display: inline-block;
+}
+
+.ImageRP img {
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+}

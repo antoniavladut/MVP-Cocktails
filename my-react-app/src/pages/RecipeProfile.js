@@ -27,15 +27,18 @@ function RecipeProfile() {
         <li> Glass: {recipe.glass}</li>
         <li> Ice: {recipe.ice}</li>
         <li> Garnish: {recipe.garnish}</li>
-        <pre>
+        <div className="IngredientsRP">
           Ingredients:
           <br />
           {recipe.ingredients}
-        </pre>
-        <pre>
+        </div>
+        <div className="InstructionsRP">
           Steps:
           <br /> {recipe.instructions}
-        </pre>
+        </div>
+        <div className="ImageRP">
+          <img src={recipe.imageUrl} />
+        </div>
       </ul>
     </div>
   );

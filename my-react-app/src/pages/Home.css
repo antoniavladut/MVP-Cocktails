@@ -1,0 +1,18 @@
+.Home .container {
+  background-image: url("https://images.unsplash.com/photo-1592858167090-2473780d894d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
+  background-size: cover;
+  min-height: 600px;
+  background-position: center;
+}
+
+.Home .HomeContent {
+  text-align: right;
+  font-size: xxx-large;
+  margin-right: 50px;
+  padding-top: 200px;
+}
+
+.Home .HomeEnterButton {
+  border-radius: 12px;
+  background-color: #da7956;
+}

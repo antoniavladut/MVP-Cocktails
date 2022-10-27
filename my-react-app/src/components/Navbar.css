@@ -1,5 +1,9 @@
 .Navbar li {
-  display: inline;
+  display: inline-block;
   list-style: none;
   padding: 20px;
+}
+
+.Navbar {
+  /* background-color: ; */
 }
