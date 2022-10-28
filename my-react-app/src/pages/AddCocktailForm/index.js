@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./AddCocktailForm.css";
+import "./style.css";
 
 function AddCocktailForm() {
   const nav = useNavigate();

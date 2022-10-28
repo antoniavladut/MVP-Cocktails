@@ -1,15 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams, useLocation, useSearchParams } from "react-router-dom";
 
 function RecipeList(props) {
+  const [searchParams] = useSearchParams({ search: "" });
+  const search = searchParams.get("search");
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
     getRecipes();
-  }, []);
+  }, [search]);
 
   const getRecipes = () => {
-    fetch("/recipes")
+    const query = new URLSearchParams({
+      title: search,
+      ingredients: search,
+      glass: search,
+      ice: search,
+      method: search,
+      garnish: search,
+    }).toString();
+    fetch("/recipes?" + query)
       .then((res) => res.json())
       .then((json) => {
         setRecipes(json);
@@ -29,7 +39,6 @@ function RecipeList(props) {
             <div className="card">
               <a href={"/recipes/" + e.id} className="btn ">
                 <img src={e.imageUrl} className="card-img-top" alt={e.title} />
-
                 <div className="card-body">
                   <h5 className="card-title">{e.title}</h5>
                   <p className="card-text">{e.ingredients}</p>
