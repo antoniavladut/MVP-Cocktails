@@ -20,7 +20,7 @@ router.get("/", function (req, res, next) {
     wheres.push(`ice LIKE '%${req.query.ice}%'`);
   }
   if (req.query.garnish) {
-    wheres.push(`title LIKE '%${req.query.garnish}%'`);
+    wheres.push(`garnish LIKE '%${req.query.garnish}%'`);
   }
   if (req.query.ingredients) {
     wheres.push(`ingredients LIKE '%${req.query.ingredients}%'`);
@@ -63,11 +63,19 @@ router.get("/:id", async function (req, res, next) {
 
 /*Insert new recipe into DB */
 router.post("/", async function (req, res, next) {
-  let { title, method, glass, ice, garnish, ingredients, instructions } =
-    req.body;
+  let {
+    title,
+    method,
+    glass,
+    ice,
+    garnish,
+    ingredients,
+    instructions,
+    imageUrl,
+  } = req.body;
   // sql command line for inserting cocktail (as completed in initial set up)
-  let sql = `INSERT INTO cocktails (title, method, glass, ice, garnish, ingredients, instructions )
-    VALUES ('${title}', '${method}', '${glass}', '${ice}', '${garnish}', '${ingredients}', '${instructions}')`;
+  let sql = `INSERT INTO cocktails (title, method, glass, ice, garnish, ingredients, instructions, imageUrl)
+    VALUES ('${title}', '${method}', '${glass}', '${ice}', '${garnish}', '${ingredients}', '${instructions}', '${imageUrl}')`;
   // adding new cocktail
   try {
     await db(sql); // add cocktail when function called
