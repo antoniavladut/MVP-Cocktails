@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
+import { ImSearch } from "react-icons/im";
 
 function Navbar() {
   const nav = useNavigate();
@@ -35,7 +36,7 @@ function Navbar() {
               onChange={(e) => setSearchInput(e.target.value)}
             />
             <button className="btn btn-outline-success" type="submit">
-              Search
+              <ImSearch />
             </button>
           </form>
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -44,11 +45,11 @@ function Navbar() {
                 <NavLink to="/recipes">Recipes</NavLink>
               </div>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <div className="nav-link">
                 <NavLink to="/favourites">Favourites</NavLink>
               </div>
-            </li>
+            </li> */}
             <li className="nav-item">
               <div className="nav-link">
                 <NavLink to="/add-cocktail">Add A Cocktail</NavLink>

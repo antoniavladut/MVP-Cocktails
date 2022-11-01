@@ -37,13 +37,13 @@ function RecipeList(props) {
         {recipes.map((e) => (
           <div className="col">
             <div className="card">
-              <a href={"/recipes/" + e.id} className="btn ">
+              <Link to={"/recipes/" + e.id} className="btn ">
                 <img src={e.imageUrl} className="card-img-top" alt={e.title} />
                 <div className="card-body">
                   <h5 className="card-title">{e.title}</h5>
                   <p className="card-text">{e.ingredients}</p>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         ))}

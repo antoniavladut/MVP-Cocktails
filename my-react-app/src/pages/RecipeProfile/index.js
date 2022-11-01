@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "./style.css";
 
 function RecipeProfile() {
   const params = useParams();
@@ -15,33 +16,54 @@ function RecipeProfile() {
       .then((json) => {
         setRecipe(json);
       })
+
       .catch((err) => {
         console.log(`Network Error: ${err.message}`);
       });
   };
   return (
-    <div className="RecipeProfile">
-      <h2>{recipe.title}</h2>
-      <ul>
-        <li> Method: {recipe.method}</li>
-        <li> Glass: {recipe.glass}</li>
-        <li> Ice: {recipe.ice}</li>
-        <li> Garnish: {recipe.garnish}</li>
-        <div className="IngredientsRP">
-          Ingredients:
-          <br />
-          {recipe.ingredients}
+    <div className="container">
+      <div className="RecipeProfile">
+        <div className="row align-items-center">
+          <div className="col-7">
+            <h2>
+              <u className="HeaderTitle ">{recipe.title}</u>
+            </h2>
+            <ul className="list-group list-group-flush">
+              <li className="list-group-item"> Method: {recipe.method}</li>
+              <li className="list-group-item"> Glass: {recipe.glass}</li>
+              <li className="list-group-item"> Ice: {recipe.ice}</li>
+              <li className="list-group-item"> Garnish: {recipe.garnish}</li>
+            </ul>
+          </div>
+          <div className="col">
+            <img
+              src={recipe.imageUrl}
+              className="rounded"
+              alt={recipe.title}
+              style={{ maxHeight: 400 }}
+            />
+          </div>
         </div>
-        <div className="InstructionsRP">
-          Steps:
-          <br /> {recipe.instructions}
+        <div className="row mt-4">
+          <div className="IngredientsRP col-7">
+            <h3>
+              <u className="IngredientsTitle ">Ingredients</u>
+            </h3>
+            <div className="ingredients">{recipe.ingredients}</div>
+          </div>
+          <div className="InstructionsRP col">
+            <h3>
+              <u className="InstructionsTitle ">Steps</u>
+            </h3>
+            <div className="instructions">{recipe.instructions}</div>
+          </div>
         </div>
-        <div className="ImageRP">
-          <img src={recipe.imageUrl} />
-        </div>
-      </ul>
+      </div>
     </div>
   );
 }
 
 export default RecipeProfile;
+
+// float-right img-fluid
