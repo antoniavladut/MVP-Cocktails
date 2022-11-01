@@ -9,3 +9,5 @@ function Error404View() {
 }
 
 export default Error404View;
+
+//Not really used! Made just in case

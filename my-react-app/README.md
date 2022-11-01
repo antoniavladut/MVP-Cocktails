@@ -68,3 +68,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+API Route Plan:
+[https://docs.google.com/document/d/1GsBYnETPLcEx-SyoI7m_eAA5DMyzWXC-GrfaFDMz25Q/edit]
+
+Wireframe plan on Canva:
+[https://www.canva.com/design/DAFP8kq-K3U/MJ130brT58bLKEo6lqpT8w/edit?utm_content=DAFP8kq-K3U&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton]
+
+
+Powerpoint presentation:
+
+[https://docs.google.com/presentation/d/1gVYfStuPkFdIv4tSOel9pfnNyDIHjrADc0Lji4LqcCk/edit?usp=sharing]
+
+Please ask me if you have any questions!! And thank you for taking on The Cocktail Cupboard :D xx
+
+ /* _This is a student project that was created at [CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona._ */

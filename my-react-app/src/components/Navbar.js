@@ -45,11 +45,6 @@ function Navbar() {
                 <NavLink to="/recipes">Recipes</NavLink>
               </div>
             </li>
-            {/* <li className="nav-item">
-              <div className="nav-link">
-                <NavLink to="/favourites">Favourites</NavLink>
-              </div>
-            </li> */}
             <li className="nav-item">
               <div className="nav-link">
                 <NavLink to="/add-cocktail">Add A Cocktail</NavLink>
@@ -57,15 +52,6 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        {/* <span
-          className="navbar-toggler-icon bg-light r"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        > */}
         <button
           className="navbar-toggler"
           type="button"
