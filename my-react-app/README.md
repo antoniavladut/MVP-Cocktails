@@ -70,6 +70,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
+Go into my-express-app directory, and run mySQl database up and running
+`cd my-express-app` then `
+step 2: npm run migrate
+npm install
+npm start
+
+
 API Route Plan:
 [https://docs.google.com/document/d/1GsBYnETPLcEx-SyoI7m_eAA5DMyzWXC-GrfaFDMz25Q/edit]
 
