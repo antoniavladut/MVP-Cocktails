@@ -113,4 +113,31 @@ router.delete("/:id", async function (req, res, next) {
   }
 });
 
+/*Modify cocktail "favourite" 0 or 1;*/
+
+router.put("/:id", async (req, res, next) => {
+  let cocktailID = req.params.id;
+  let {favourite} = req.body;
+
+  try {
+      let result = await db(`SELECT * FROM cocktails WHERE id = ${cocktailID}`);  // does cocktail exist?
+      if (result.data.length === 0) {
+          res.status(404).send({ error: 'Cocktail not found' });
+      } else {
+          let sql = `
+              UPDATE cocktails 
+              SET favourite = !favourite
+              WHERE id = ${cocktailID}
+          `;
+
+          await db(sql);  // update cocktail
+          let result = await db('SELECT * FROM cocktails');
+          let cocktails = result.data;
+          res.send(cocktails);  // return updated array
+      }
+  } catch (err) {
+      res.status(500).send({ error: err.message });
+  }
+});
+
 module.exports = router;
