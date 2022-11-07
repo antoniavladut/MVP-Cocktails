@@ -40,6 +40,22 @@ router.get("/", function (req, res, next) {
     .catch((err) => res.status(500).send(err));
 });
 
+//get recipe where favourites is 1
+
+router.get("/favourites", async function(req, res, next) {
+  
+  try {
+    let result = await db(`SELECT * FROM cocktails WHERE favourite = 1`);
+    res.send(result.data);
+    
+  } catch (err) {
+    res.status(500).send({ error: err.message });
+  }
+});
+
+
+
+
 /* Get recipe by ID */
 router.get("/:id", async function (req, res, next) {
   // create id for searching

@@ -7,8 +7,10 @@ const logger = require("morgan");
 
 const indexRouter = require("./routes/index");
 const recipesRouter = require("./routes/recipes");
+var authRouter = require('./routes/auth');
 
 const app = express();
+
 
 app.use(cors()); // add after 'app' is created
 app.use(logger("dev"));
@@ -19,5 +21,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/recipes", recipesRouter);
+
+// Routes
+app.use('/', authRouter); 
+// // app.use('/', indexRouter);
+// app.use('/users', usersRouter);
 
 module.exports = app;
