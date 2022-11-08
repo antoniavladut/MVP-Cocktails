@@ -21,6 +21,26 @@ function RecipeProfile() {
         console.log(`Network Error: ${err.message}`);
       });
   };
+
+  //set favourites:
+  // const [favourites, setFavourites] = useState([]);
+
+  // useEffect(() => {
+  //   setFavourites();
+  // }, []);
+
+  // useEffect(() => {
+  //   console.log(favourites);
+  // }, [favourites]);
+
+  // function handleFavourite(id) {
+  //   const newFavourites = favourites.map(recipe => {
+  //     return recipe.id === id ? { ...recipe, favourite: !recipe.favourite } : recipe;
+  //   });
+
+  //   setFavourites(newFavourites);
+  // }
+
   return (
     <div className="container">
       <div className="RecipeProfile">
@@ -30,11 +50,13 @@ function RecipeProfile() {
               <u className="HeaderTitle ">{recipe.title}</u>
             </h2>
             <ul className="list-group list-group-flush">
-              <li className="list-group-item"> Method: {recipe.method}</li>
-              <li className="list-group-item"> Glass: {recipe.glass}</li>
-              <li className="list-group-item"> Ice: {recipe.ice}</li>
-              <li className="list-group-item"> Garnish: {recipe.garnish}</li>
+              <li className="list-group-item"> <b>Method:</b> {recipe.method}</li>
+              <li className="list-group-item"> <b>Glass:</b> {recipe.glass}</li>
+              <li className="list-group-item"> <b>Ice:</b> {recipe.ice}</li>
+              <li className="list-group-item"> <b>Garnish:</b> {recipe.garnish}</li>
             </ul>
+           
+
           </div>
           <div className="col">
             <img

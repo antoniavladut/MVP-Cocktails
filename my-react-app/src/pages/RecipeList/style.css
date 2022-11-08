@@ -1,4 +1,14 @@
-.cocktail {
+
+
+ /* danger button */
+ .btn-outline-danger {
+  background-color: #FFF;
+  color: #ac2925;
+  border-color: #d2322d;
+  border-radius: 25px;
+ }
+
+ .card {
   padding: 0, 36px;
   display: inline-flex;
   margin: 0px auto;
