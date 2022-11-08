@@ -13,3 +13,7 @@
   display: inline-flex;
   margin: 0px auto;
 }
+
+h2, .card-title{
+  font-family: "HV Cocktail Regular";
+}

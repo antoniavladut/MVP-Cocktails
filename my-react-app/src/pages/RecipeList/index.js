@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams, useLocation, useSearchParams } from "react-router-dom";
 import "./style.css"
 
-// import LoginView from '/.pages/'
+
 
 
 function RecipeList(props) {
@@ -10,8 +10,7 @@ function RecipeList(props) {
   const search = searchParams.get("search");
   const [recipes, setRecipes] = useState([]);
   const [favourites, setFavourites] = useState([]);
-  // const jwt = require("jsonwebtoken");
-  // const { SECRET_KEY } = require("../config");
+
 
   //search function
   useEffect(() => {
@@ -65,24 +64,8 @@ function RecipeList(props) {
     };
   }
 
-   //check if user is logged in function
-
-//    function ensureUserLoggedIn(req, res, next) {
-//     let token = _getToken(req);
-
-//     try {
-//         // Throws error on invalid/missing token
-//         jwt.verify(token, SECRET_KEY);
-//         // If we get here, a valid token was passed
-//         next();
-//     } catch (err) {
-//         res.status(401).send({ error: 'Unauthorized' });
-//     }
-// }
-// }
-
+   
     
-  
  
 
   return (
